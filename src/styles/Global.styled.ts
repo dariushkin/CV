@@ -1,3 +1,16 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobaStyle = createGlobalStyle`
+
+*,
+*::before
+*::after {
+margin:0;
+padding: 0;
+box-sizing:border-box;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +20,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+
+`

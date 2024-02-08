@@ -1,4 +1,4 @@
-import { Icon } from "./icon/Icon"
+import { Icon } from "../icon/Icon"
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export const Logo = () => {

@@ -8,7 +8,7 @@ import { Skill } from "./skill/Skill"
 export const Skills = () => {
     return (
         <StyledSkills>
-            <SectionTitle>
+            <SectionTitle color="#8A30CD" weight="800">
                 Key skills
             </SectionTitle>
             <FlexWrapper wrap="{wrap}">

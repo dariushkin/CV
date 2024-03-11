@@ -89,7 +89,7 @@
 </symbol>
 
 <symbol id ="siteLogo" viewBox="0 0 24 24">
-   <path fill="none" stroke="#000" stroke-width="1.5" d="M19.25 4.75H4.75v14.5h14.5V4.75Z"/><path fill="none" stroke="#000" stroke-width="1.5" d="M7.5 7.5l1.25 1.25L10 10l-2.5 2.5"/><path fill="none" stroke="#000" stroke-width="1.5" d="M16 12.25h-5"/>
+   <path fill="none" stroke="#9e22e9d9" stroke-width="1.5" d="M19.25 4.75H4.75v14.5h14.5V4.75Z"/><path fill="none" stroke="#9e22e9d9" stroke-width="1.5" d="M7.5 7.5l1.25 1.25L10 10l-2.5 2.5"/><path fill="none" stroke="#9e22e9d9" stroke-width="1.5" d="M16 12.25h-5"/>
 </symbol>
 
 </svg>

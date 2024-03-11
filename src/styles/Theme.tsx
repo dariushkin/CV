@@ -8,5 +8,13 @@ export const theme = {
         gradientStartColor:"#10ed73ce",
         gradientMiddleColor:"#10ed98d9",
         gradientEndColor:"#9e22e9d9",
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)"
     }
+
+
+
 }

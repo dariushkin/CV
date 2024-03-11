@@ -1,36 +1,36 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import { styled } from "styled-components"
 import { Logo } from "../../components/logo/Logo"
-import { Navigation } from "../../components/navigation/Navigation"
-import { Container } from "../../components/Container"
-import { FlexWrapper } from "../../components/FlexWrapper"
-import { theme } from "../../styles/Theme"
 
+import { Container } from "../../components/Container"
+import { MobileNavigation } from "./headerNavigations/mobileNavigation/MobileNavigation"
+import { S } from "../header/Header_Styles"
+import React from "react"
+import { DesktopNavigation } from "./headerNavigations/desktopNavigation/DesktopNavigation"
 const items = ["Profile", "Location", "Contacts", "Languages", "Education", "Key Skills", "Projects",]
 
-export const Header = () => {
-    return (
-        <StyledHeader>
-            <Container>
-                <FlexWrapper justify="space-between" align="center" >
-                        <Logo />
+export const Header: React.FC = () => {
 
-                    <Navigation navigationItems={items} />
-                </FlexWrapper>
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+
+    return (
+        <S.Header>
+            <Container>
+                <S.HeaderWrapper>
+                    <Logo />
+                    {width < breakpoint ? <MobileNavigation navigationItems={items} />
+                    : <DesktopNavigation navigationItems={items} />}
+                </S.HeaderWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     )
 }
 
-
-const StyledHeader = styled.header`
-
-margin-top:10px;
-
-
- a {
-    color: ${theme.colors.textColor}
-}
-
-`

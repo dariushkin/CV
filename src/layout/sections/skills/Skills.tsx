@@ -1,28 +1,52 @@
-import styled from "styled-components"
+
 import { FlexWrapper } from "../../../components/FlexWrapper"
 import { SectionTitle } from "../../../components/SectionTitle"
 import { Skill } from "./skill/Skill"
+import {S} from ".//Skills_Styles"
+import React from "react"
 
+const skillsData = [
+    {
+        iconId: "jsSkillIcon",
+        skillDescription: "JS"
 
+    },
 
-export const Skills = () => {
+    {
+        iconId: "cssSkillIcon",
+        skillDescription: "CSS"
+
+    },
+    {
+        iconId: "htmlSkillIcon",
+        skillDescription: "HTML"
+
+    },
+
+    {
+        iconId: "reactSkillIcon",
+        skillDescription: "React"
+
+    }
+
+]
+
+export const Skills:React.FC = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <SectionTitle color="#8A30CD" weight="800">
                 Key skills
             </SectionTitle>
             <FlexWrapper wrap="{wrap}">
-                <Skill iconId={"jsSkillIcon"} skillDescription={"JS"} />
-                <Skill iconId={"cssSkillIcon"} skillDescription={"CSS"} />
-                <Skill iconId={"htmlSkillIcon"} skillDescription={"HTML"} />
-                <Skill iconId={"reactSkillIcon"} skillDescription={"React"} />
-            </FlexWrapper>
 
-        </StyledSkills>
+                {skillsData.map((s: { iconId: string, skillDescription: string }, index) => {
+                    return (
+                        <Skill iconId={s.iconId}  key = {index}
+                        skillDescription={s.skillDescription} />
+                    )
+                })}
+            </FlexWrapper>
+        </S.Skills>
     )
 }
 
-const StyledSkills = styled.section`
-margin-top:30px;
-
-`

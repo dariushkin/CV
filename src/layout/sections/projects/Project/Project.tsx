@@ -1,56 +1,30 @@
-import { styled } from "styled-components"
+
+import React from "react"
 import { FlexWrapper } from "../../../../components/FlexWrapper"
+import {S} from "../Projects_Styles"
 
 
 type ProjectPropsType = {
-    title: string
-    text: string
-    src: string
+    title: string,
+    text: string,
+    src: string,
     preViewLink: string,
     gitHubLink: string,
 }
 
-export const Project = (props: ProjectPropsType) => {
+export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
     return (
-        <StyledProject>
+        <S.Project>
             <FlexWrapper direction="column">
-            <ProjectTitle>{props.title}</ProjectTitle>
-                <ProjectImage src={props.src} alt="projectImage"></ProjectImage>
-                <ProjectDescription>{props.text}</ProjectDescription>
-                <ProjectPreViewLink href="{props.preViewLink}">Live Preview</ProjectPreViewLink>
-                <ProjectGitHubLink href="{props.gitHubLink}">View Code</ProjectGitHubLink>
+                <S.ProjectTitle>{props.title}</S.ProjectTitle>
+                <S.ProjectImage src={props.src} alt="projectImage"></S.ProjectImage>
+                <S.ProjectDescription>{props.text}</S.ProjectDescription>
+                <FlexWrapper>
+                    <S.ProjectPreViewLink href="{props.preViewLink}">Live Preview</S.ProjectPreViewLink>
+                    <S.ProjectGitHubLink href="{props.gitHubLink}">View Code</S.ProjectGitHubLink>
+                </FlexWrapper>
             </FlexWrapper>
-
-
-        </StyledProject>
+        </S.Project>
     )
 }
 
-const StyledProject = styled.div`
-
-    background-color: #fff;
-    width:30%;
-`
-
-const ProjectImage = styled.img`
-    border-radius:10%;
-`
-
-const ProjectTitle = styled.h3`
-    text-align:center;
-    font-size: 0.9em;
- `
-
-const ProjectDescription = styled.p`
-    text-align:center;
-    font-size: 0.7em;
-`
-
-const ProjectPreViewLink = styled.a`
-    display:inline-block;
-
-`
-
-const ProjectGitHubLink = styled.a`
-     display:inline-block;
-`

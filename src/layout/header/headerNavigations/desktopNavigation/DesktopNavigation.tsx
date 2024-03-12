@@ -1,27 +1,16 @@
 
-import styled from "styled-components"
-import { Navigation } from "../navigation/navigation"
-
+import { Navigation } from "../navigation/Navigation"
+import {S} from "../headerNavigations_Styles"
 
 
 
 
 export const DesktopNavigation: React.FC<{ navigationItems: Array<string> }> = (props: { navigationItems: Array<string> }) => {
     return (
-        <StyledNavigation>
+        <S.DesktopNavigation>
             <Navigation navigationItems={props.navigationItems}/>
-        </StyledNavigation >
+        </S.DesktopNavigation >
     )
 }
 
-const StyledNavigation = styled.nav`
 
-   margin-right:140px;
-
- ul {
-    display: flex;
-   gap: 30px;
-
- }
-
-`

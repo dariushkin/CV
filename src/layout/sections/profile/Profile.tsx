@@ -6,11 +6,11 @@ import { IconContainer } from "../../../components/IconContainer";
 
 
 
-export const Profile = () => {
+export const Profile: React.FC = () => {
     return (
         <StyledProfile>
             <IconContainer top="2%" left="0" right="50%">
-            <Icon iconId={"profileIcon"} width={"24"} height={"24"} />
+                <Icon iconId={"profileIcon"} width={"24"} height={"24"} />
             </IconContainer>
             <SectionTitle>Profile</SectionTitle>
             <p>Junior Frontend Developer (not really yet) with no commercial experience, but with a genuine interest in web development. Several months of self-education in basic HTML, CSS, JS make me more confident in my choice to continue learning deeper these professional competencies.</p>
@@ -23,7 +23,7 @@ export const Profile = () => {
 }
 
 const StyledProfile = styled.section`
-position:relative;
+    position:relative;
 
 `
 

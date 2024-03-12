@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { IconContainer } from '../../../components/IconContainer';
 
 
-export const Location = () => {
+export const Location: React.FC = () => {
     return (
 
         <StyledLocation>

@@ -6,7 +6,7 @@ import { IconContainer } from '../../../components/IconContainer';
 
 
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
     return (
         <StyledContacts>
             <IconContainer top="2%" left="0" right="50%">

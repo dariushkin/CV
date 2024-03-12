@@ -6,11 +6,11 @@ import { styled } from 'styled-components';
 import { IconContainer } from "../../../components/IconContainer";
 
 
-export const Languages = () => {
+export const Languages: React.FC = () => {
     return (
 
         <StyledLanguages>
-            <IconContainer top="2%" left="0" right="50%">
+            <IconContainer top="2%" left="0" right="55%">
                 <Icon iconId={"langIcon"} width={"24"} height={"24"} />
             </IconContainer>
             <SectionTitle>

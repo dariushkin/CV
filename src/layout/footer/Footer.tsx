@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 
-export const Footer = () => {
+export const Footer:React.FC = () => {
     return (
         <StyledFooter>
             <Copyright>

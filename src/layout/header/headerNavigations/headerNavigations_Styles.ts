@@ -4,15 +4,14 @@ import styled, { css } from "styled-components"
 const DesktopNavigation = styled.nav`
 
    margin-right:140px;
+    
+   ul {
+        display: flex;
+        gap: 30px;
 
- ul {
-    display: flex;
-   gap: 30px;
-
- }
+    }
 
 `
-
 const BurgerButton = styled.button<{ isOpen: boolean }>`
     position:fixed;
     width: 50px;
@@ -67,9 +66,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 const MobileNavigation = styled.nav`
 
-@media screen and (max-width:768px) {
-    margin-left:75vw;
-   }
+    @media screen and (max-width:900px) {
+        margin-left:75vw;
+    }
 
 `
 
@@ -80,7 +79,7 @@ const MobileNavigationPopup = styled.div<{ isOpen: boolean }>`
     right:0;
     bottom:0;
     z-index: 9999;
-    background-color: rgba(158, 34, 233, 0.9);
+    background-color: rgba(158, 34, 233, 0.7);
     display:none;
 
 ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -96,12 +95,11 @@ ul {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-right:140px;
+    margin: 80px 0 auto;
 
 }
 
 `
-
 
 export const S = {
     DesktopNavigation,

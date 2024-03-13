@@ -52,8 +52,15 @@ const ProfileContainer = styled.div`
 
     @media ${theme.media.tablet} {
         max-width:100vw;
+        width: 100%
 
 }
+
+
+/* @media screen and (max-width: 310px) {
+        max-width:100%;
+
+} */
 `
 const MainInfoContainer = styled.div`
     margin:120px;

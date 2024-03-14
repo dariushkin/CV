@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { theme } from '../../../../styles/Theme';
-import { styled } from 'styled-components';
+import { S } from '../headerNavigations_Styles';
 
 export const Navigation: React.FC<{ navigationItems: Array<string> }> = (props: { navigationItems: Array<string> }) => {
     return (
@@ -9,7 +8,7 @@ export const Navigation: React.FC<{ navigationItems: Array<string> }> = (props: 
             {props.navigationItems.map((item, index) => {
                 return (
 
-                    <SlyledNavigationItems key={index}><a href="">{item}</a></SlyledNavigationItems>
+                    <S.NavigationItems key={index}><a href="">{item}</a></S.NavigationItems>
                 )
             })}
         </ul>
@@ -17,9 +16,3 @@ export const Navigation: React.FC<{ navigationItems: Array<string> }> = (props: 
 };
 
 
-const SlyledNavigationItems = styled.li`
-    &:hover {
-    background-color:${theme.colors.hoverNavigationcolor};
-   }
-
-`

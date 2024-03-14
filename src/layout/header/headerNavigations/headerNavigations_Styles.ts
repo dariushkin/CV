@@ -1,17 +1,36 @@
 import styled, { css } from "styled-components"
+import { theme } from "../../../styles/Theme"
 
 
 const DesktopNavigation = styled.nav`
 
    margin-right:140px;
-    
+
    ul {
         display: flex;
         gap: 30px;
 
     }
 
+@media ${theme.media.tablet} {
+    display:none;
+}
+
 `
+
+const MobileNavigation = styled.nav`
+    display:none;
+
+    @media screen and (max-width:900px) {
+        display:block;
+        margin-left:80vw;
+    }
+
+`
+
+
+
+
 const BurgerButton = styled.button<{ isOpen: boolean }>`
     position:fixed;
     width: 50px;
@@ -61,16 +80,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         `}
 
         }
-    }
-`
-
-const MobileNavigation = styled.nav`
-
-    @media screen and (max-width:900px) {
-        margin-left:75vw;
-    }
-
-`
+    }`
 
 const MobileNavigationPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
@@ -80,31 +90,44 @@ const MobileNavigationPopup = styled.div<{ isOpen: boolean }>`
     bottom:0;
     z-index: 9999;
     background-color: rgba(158, 34, 233, 0.7);
-    display:none;
-
-${props => props.isOpen && css<{ isOpen: boolean }>`
     display:flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(100%);
+    transition: ${theme.animation.transition};
+
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin: 80px 0 auto;
+        transition: ${theme.animation.transition};
+    }
+
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
+        transform: translateX(0);
 
 
 `}
 
-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin: 80px 0 auto;
+    `
 
-}
+const NavigationItems = styled.li`
+    &:hover {
+    background-color:${theme.colors.hoverNavigationcolor};
+    transition: ${theme.animation.transition}
 
-`
+   }`
+
+
+
 
 export const S = {
     DesktopNavigation,
     BurgerButton,
     MobileNavigation,
     MobileNavigationPopup,
-
+    NavigationItems,
 }

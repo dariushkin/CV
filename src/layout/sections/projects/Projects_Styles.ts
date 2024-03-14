@@ -6,6 +6,7 @@ import { font } from "../../../styles/Common"
 const Project = styled.div`
     background-color: #fff;
     width:30%;
+
     
     @media ${theme.media.tablet} {
         width:100%;
@@ -17,6 +18,14 @@ const Project = styled.div`
 
 const ProjectImage = styled.img`
     border-radius:10%;
+    transition: ${theme.animation.transition};
+    
+    
+    
+    &:hover {
+        border: 3px solid ${theme.colors.projectHoverColor};
+        
+    }
 `
 
 const ProjectTitle = styled.h3`

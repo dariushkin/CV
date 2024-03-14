@@ -5,7 +5,7 @@ import { theme } from "../../styles/Theme"
 
 const Header = styled.header`
 
-margin-top:10px;
+padding-top:10px;
 
  a {
     color: ${theme.colors.textColor}

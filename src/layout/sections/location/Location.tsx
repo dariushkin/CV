@@ -8,7 +8,7 @@ import { IconContainer } from '../../../components/IconContainer';
 export const Location: React.FC = () => {
     return (
 
-        <StyledLocation>
+        <StyledLocation id={"location"}>
             <IconContainer top="2%" left="0" right="50%">
             <Icon iconId={"locationIcon"} width={"24"} height={"24"}/>
             </IconContainer>

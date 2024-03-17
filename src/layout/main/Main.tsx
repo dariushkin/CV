@@ -7,17 +7,27 @@ import { Location } from "../sections/location/Location";
 import { Skills } from "../sections/skills/Skills";
 import { Projects } from "../sections/projects/Projects";
 import { Container } from "../../components/Container";
-import {S} from "../main/Main_Styles"
-
+import { S } from "../main/Main_Styles"
+import Typewriter from 'typewriter-effect';
 
 
 export const Main: React.FC = () => {
     return (
 
-        <S.Main>
+        <S.Main id={"home"}>
             <Container display="grid">
                 <S.MainTitleContainer>
-                    <p>Daria Komarova<h1>Front-end Developer</h1></p>
+                    
+                    <h1>
+                    <span>Daria Komarova</span>
+                        <Typewriter
+                            options={{
+                                strings: ["Frontend developer"],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
+                    </h1>
                 </S.MainTitleContainer>
                 <S.ProfileContainer>
                     <S.UserPic src={userpic} alt="userpic" width="200" height="200" />

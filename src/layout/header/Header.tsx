@@ -7,7 +7,7 @@ import { MobileNavigation } from "./headerNavigations/mobileNavigation/MobileNav
 import { S } from "../header/Header_Styles"
 import React from "react"
 import { DesktopNavigation } from "./headerNavigations/desktopNavigation/DesktopNavigation"
-const items = ["Profile", "Location", "Contacts", "Languages", "Education", "Key Skills", "Projects",]
+
 
 export const Header: React.FC = () => {
 
@@ -26,8 +26,8 @@ export const Header: React.FC = () => {
             <Container>
                 <S.HeaderWrapper>
                     <Logo />
-                    {width < breakpoint ? <MobileNavigation navigationItems={items} />
-                    : <DesktopNavigation navigationItems={items} />}
+                    {width < breakpoint ? <MobileNavigation />
+                    : <DesktopNavigation />}
                 </S.HeaderWrapper>
             </Container>
         </S.Header>

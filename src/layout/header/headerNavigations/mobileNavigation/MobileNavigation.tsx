@@ -6,7 +6,7 @@ import {S} from "../headerNavigations_Styles"
 import { Navigation } from "../navigation/Navigation"
 
 
-export const MobileNavigation: React.FC<{ navigationItems: Array<string> }> = (props: { navigationItems: Array<string> }) => {
+export const MobileNavigation: React.FC = () => {
 
    const [menuIsOpen, setMenuIsOpen] = useState(false)
    const onBurgerBtnClick = () => {setMenuIsOpen(!menuIsOpen)}
@@ -20,7 +20,7 @@ export const MobileNavigation: React.FC<{ navigationItems: Array<string> }> = (p
             </S.BurgerButton>
 
             <S.MobileNavigationPopup isOpen={menuIsOpen} onClick={ () => {setMenuIsOpen (false)} }>
-                <Navigation navigationItems={props.navigationItems}/>
+                <Navigation/>
             </S.MobileNavigationPopup>
 
         </S.MobileNavigation>

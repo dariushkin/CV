@@ -1,6 +1,7 @@
 import { theme } from "./Theme"
 
 type FontPropsType = {
+
 family?: string,
 weight?: number,
 lineHeight?: number,

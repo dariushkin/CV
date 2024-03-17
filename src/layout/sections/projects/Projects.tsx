@@ -10,7 +10,6 @@ import { Project } from './Project/Project';
 import { styled } from "styled-components"
 import { theme } from "../../../styles/Theme"
 
-
 const projectsData = [
 
     {
@@ -39,10 +38,9 @@ const projectsData = [
 
 ]
 
-
 export const Projects = () => {
     return (
-        <S.Projects>
+        <S.Projects id={"projects"}>
             <SectionTitle color="#8A30CD" weight="800">Projects</SectionTitle>
             <FlexWrapper gap="20px" wrap="wrap">
                 {projectsData.map((p: { title: string; text: string; src: string; preViewLink: string; gitHubLink: string }, index) => {
@@ -54,7 +52,6 @@ export const Projects = () => {
 
     )
 }
-
 
 const Slider: React.FC = () => {
     return (
@@ -69,9 +66,8 @@ const Slider: React.FC = () => {
     );
 };
 
-
 const StyledSlider = styled.div`
-@media ${theme.media.tablet} {}
+
 `
 const Pagination = styled.div`
 
@@ -92,3 +88,4 @@ const Pagination = styled.div`
  }
 }
 `
+

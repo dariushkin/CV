@@ -8,7 +8,7 @@ import { IconContainer } from "../../../components/IconContainer";
 
 export const Profile: React.FC = () => {
     return (
-        <StyledProfile>
+        <StyledProfile id={"profile"}>
             <IconContainer top="2%" left="0" right="50%">
                 <Icon iconId={"profileIcon"} width={"24"} height={"24"} />
             </IconContainer>

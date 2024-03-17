@@ -5,10 +5,10 @@ import {S} from "../headerNavigations_Styles"
 
 
 
-export const DesktopNavigation: React.FC<{ navigationItems: Array<string> }> = (props: { navigationItems: Array<string> }) => {
+export const DesktopNavigation: React.FC = () => {
     return (
         <S.DesktopNavigation>
-            <Navigation navigationItems={props.navigationItems}/>
+            <Navigation/>
         </S.DesktopNavigation >
     )
 }

@@ -34,6 +34,7 @@ const MainTitleContainer = styled.div`
     grid-row: 1 / 2;
     margin-left: 120px;
 
+  
 @media ${theme.media.tablet} {
     grid-column: 1 / 2;
     grid-row: 1 / 2;

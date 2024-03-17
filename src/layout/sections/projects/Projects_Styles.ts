@@ -85,6 +85,33 @@ const Projects = styled.section`
 
 }
 `
+const Slider = styled.div`
+max-width: 500px;
+border: 1px solid red;
+@media ${theme.media.tablet} {}
+`
+const Pagination = styled.div`
+
+ @media ${theme.media.tablet} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+
+        span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: ${theme.colors.gradientEndColor};
+            border-radius: 50%;
+
+ }
+}
+`
+
+
+
 
 export const S = {
     Project,
@@ -94,4 +121,6 @@ export const S = {
     ProjectPreViewLink,
     ProjectGitHubLink,
     Projects,
+    Slider,
+    Pagination,
 }

@@ -33,7 +33,7 @@ const skillsData = [
 
 export const Skills:React.FC = () => {
     return (
-        <S.Skills>
+        <S.Skills id={"keySkills"}>
             <SectionTitle color="#8A30CD" weight="800">
                 Key skills
             </SectionTitle>

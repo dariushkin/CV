@@ -1,14 +1,46 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { S } from '../headerNavigations_Styles';
+import { Link } from 'react-scroll';
 
-export const Navigation: React.FC<{ navigationItems: Array<string> }> = (props: { navigationItems: Array<string> }) => {
+const items = [
+
+    {
+        title: "Profile",
+        href: "profile"
+    },
+    {
+        title: "Location",
+        href: "location"
+    },
+    {
+        title: "Contacts",
+        href: "contacts"
+    },
+    {
+        title: "Languages",
+        href: "languages"
+    },
+    
+    {
+        title: "Key Skills",
+        href: "keySkills"
+    },
+    {
+        title: "Projects",
+        href: "projects"
+    },
+
+]
+
+export const Navigation: React.FC = () => {
     return (
         <ul>
-            {props.navigationItems.map((item, index) => {
+            {items.map((item, index) => {
                 return (
-
-                    <S.NavigationItems key={index}><a href="">{item}</a></S.NavigationItems>
+                    <S.NavigationItems key={index}>
+                        <Link to={item.href} smooth={true}>{item.title}</Link>
+                    </S.NavigationItems>
                 )
             })}
         </ul>

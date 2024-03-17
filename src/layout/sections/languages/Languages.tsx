@@ -9,7 +9,7 @@ import { IconContainer } from "../../../components/IconContainer";
 export const Languages: React.FC = () => {
     return (
 
-        <StyledLanguages>
+        <StyledLanguages id={"languages"}>
             <IconContainer top="2%" left="0" right="55%">
                 <Icon iconId={"langIcon"} width={"24"} height={"24"} />
             </IconContainer>
